@@ -11,11 +11,10 @@
 
 #define SERVER_NAME "http://192.168.43.94:8000/store-data"
 
-//pin
 #define DHTPIN 33
 #define DHTTYPE DHT22
 #define SOIL_MOISTURE_PIN 34
-#define RELAY_FAN1_PIN 17 // ESP32 pin connected to relay
+#define RELAY_FAN1_PIN 17
 #define RELAY_FAN2_PIN 5
 #define RELAY_PUMP1_PIN 19
 #define RELAY_PUMP2_PIN 18
@@ -28,9 +27,9 @@ DHT dht(DHTPIN, DHTTYPE);
 BH1750 lightMeter;
 
 // threshold untuk controlling
-#define Temp 24 // suhu udara
-#define Hum_Air 70 // kelembaban udara
-#define Soil 48 // kelembaban tanah
+#define Temp 24
+#define Hum_Air 70
+#define Soil 48
 
 unsigned long lastTime = 0;
 unsigned long timerDelay = 1000;
@@ -80,7 +79,6 @@ void loop() {
     return;
   }
 
-    // keadaaan jika..
   if (temperature > Temp){
     digitalWrite(RELAY_FAN1_PIN, HIGH); fan1_status = true;
     digitalWrite(RELAY_FAN2_PIN, HIGH); fan2_status = true;

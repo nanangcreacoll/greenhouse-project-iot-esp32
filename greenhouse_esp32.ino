@@ -29,7 +29,7 @@ BH1750 lightMeter;
 // threshold untuk controlling
 #define Temp 24
 #define Hum_Air 70
-#define Soil 48
+#define Soil 74
 
 unsigned long lastTime = 0;
 unsigned long timerDelay = 1000;

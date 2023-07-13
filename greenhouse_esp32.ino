@@ -158,6 +158,18 @@ void loop() {
   Serial.print("Light Intensity: ");
   Serial.print(light_intensity);
   Serial.println(" lux");
+
+  Serial.print("Fan 1: ");
+  Serial.println(fan1_status);
+
+  Serial.print("Fan 2: ");
+  Serial.println(fan2_status);
+
+  Serial.print("Pump 1: ");
+  Serial.println(pump1_status);
+
+  Serial.print("Pump 2: ");
+  Serial.println(pump2_status);
 }
 
 double round2(double value) {

@@ -5,11 +5,7 @@
 #include <DHT.h>
 #include <BH1750.h>
 #include <ArduinoJson.h>
-
-#define WIFI_SSID "realme 5i"
-#define WIFI_PASSWORD "qwerty123"
-
-#define SERVER_NAME "http://192.168.43.94:8000/store-data"
+#include "env.h"
 
 #define DHTPIN 33
 #define DHTTYPE DHT22
@@ -26,7 +22,6 @@
 DHT dht(DHTPIN, DHTTYPE);
 BH1750 lightMeter;
 
-// threshold untuk controlling
 #define Temp 24
 #define Hum_Air 70
 #define Soil 74
@@ -143,7 +138,6 @@ void loop() {
     }
   }
 
-  // print
   Serial.print("Temperature: ");
   Serial.print(temperature);
   Serial.println(" °C");
